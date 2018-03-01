@@ -1,7 +1,5 @@
 'use strict'
 
-import time from './hora'
-
 function include(filename) {
     if (filename) {
         var head = document.getElementsByTagName('head')[0]
@@ -13,7 +11,7 @@ function include(filename) {
     }
 }
 
-//include('./libs/hora.js')
+include('./libs/hora.js')
 include('./libs/mapas.js')
 
 var base = document.getElementById('base')
@@ -21,8 +19,6 @@ var fdatos = document.getElementById('fdatos')
 var cartel = document.getElementById('cartel')
 var msg = document.getElementById('msg')
 var search = document.getElementById('search')
-
-time()
 
 function hideform(mydiv) {
     mydiv.style.display = 'none'

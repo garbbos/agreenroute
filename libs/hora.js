@@ -1,7 +1,9 @@
-exports.time = function(div) {
+(function hora() {
     'use strict'
 
-    if (div && typeof div == object) {
+    var hora = document.getElementById('hora')
+
+    if (hora) {
 
         var setTime = function() {
             var d = new Date()
@@ -20,4 +22,4 @@ exports.time = function(div) {
 
         setTime()
     }
-}
+})()
