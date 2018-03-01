@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>A Green Route</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" type="text/css" href="./libs/estilo.css">
+    <link rel="stylesheet" type="text/css" href="./libs/leaflet.css">
+    <script type="text/javascript" src="./libs/apps.js" defer></script>
+    <script type="text/javascript" src="./libs/leaflet.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" defer/>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js" defer></script>
+</head>
+
+<body class="nomargen">
+    <nav>
+        <svg class="logo margen" xmlns="http://www.w3.org/2000/svg" width="150" height="32">
+            <rect x="2" y="2" width="44" height="24" style="fill:#ffffff; stroke:#242424; stroke-width:1; fill-opacity:.8;" />
+            <polygon points="2,2 38,32 46,2" style="fill:#ffffff; fill-opacity:.8; stroke:#226600; stroke-width:1;" />
+            <text class="textosvg" x="60" y="24" fill="#fff" style="text-anchor: start; font-size: 1.6em; font-family: Verdana, sans serif; font-weight: bold">A Green Route</text>
+        </svg>
+        <div class="margen">
+            <form action="">
+                <input type="text" class="search" id="search" name="search" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    <section>
+        <article class="map" id="map"></article>
+        <article class="verde lateral">
+            <span class="item" id="hora"></span><br>
+            <span class="item" id="coor"></span>
+        </article>
+    </section>
+
+    <section class="base" id="base">
+        <article class="marco sombra animate">
+            <form id="fdatos" name="fdatos" action="./libs/name.php" method="post">
+                <div class="topventana">
+                    <span class="rotulo" id="titulo">Contacto</span>
+                    <button type="submit" class="boton" id="mandar">&#x2714;</button>
+                    <button class="boton" id="cerrar">&#x2718;</button>
+                </div>
+                <input type="text" class="campo" id="fname" name="fname" placeholder="Nombre..." required>
+                <input type="text" class="campo" id="fapel" name="fapel" placeholder="Apellido...">
+                <input type="tel" class="campo" id="ftel" name="ftel" placeholder="Teléfono..." required>
+                <input type="email" class="campo" id="femail" name="femail" placeholder="Email...">
+            </form>
+        </article>
+    </section>
+
+    <section class="contrata">
+        <a href="#" class="boton btn cancelar" id="btn"><span class="icon" id="camion"></span>Servicio Urgente</a>
+    </section>
+
+    <section class="status animate" id="cartel">
+        <p class="msg margen" id="msg"></p>
+    </section>
+</body>
+
+</html>
